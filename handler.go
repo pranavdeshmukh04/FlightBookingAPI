@@ -62,7 +62,7 @@ func deleteFlight(w http.ResponseWriter, r *http.Request) {
 func updateFlight(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id := vars["id"]
-
+	fmt.Println("Updating Flight By Id:", id)
 	for index, flight := range flights {
 		if flight.ID == id {
 			flights = append(flights[:index], flights[index+1:]...)
